@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            height: 100px;
+            font-size: 70px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .description {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 10px;
+            justify-items: center;
+        }
+
+
+        .social-link {
+            width: 150px;
+            height: 55px;
+            border-radius: 15px;
+            display: flex;
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 60px;
+            overflow: hidden;
+            transition: background-color 0.5s;
+            text-decoration: none;
+            color: black;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .social-link-channel {
+            width: 150px;
+            height: 55px;
+            border-radius: 15px;
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 60px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            overflow: hidden;
+            transition: background-color 0.5s;
+            text-decoration: none;
+            color: black;
+        }
+
+        .social-link-channel:hover {
+            background-color: #e1e1e1;
+        }
+
+        .social-link-channel img {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: block;
+            margin-left: 5px;
+            object-fit: contain;
+        }
+
+        .social-link-channel p {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .social-link:hover {
+            background-color: #e1e1e1;
+        }
+
+
+        .social-link img {
+            width: 30%;
+            height: auto;
+            display: block;
+            margin-left: 5px;
+            object-fit: contain;
+        }
+
+
+        .social-link p {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #a1a1a1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer img {
+            width: 80px;
+            height: 40px;
+            margin-right: 5px;
+            object-fit: contain;
+        }
+
+        /* Стили для кнопки "Показать резюме" */
+        #resume-button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        #resume-button:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+
+        /* Стили для элемента резюме */
+        #resume {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        /* Стили для текста в резюме */
+        #resume p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem 0;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 2s;
+            }
+
+            .profile-image {
+                width: 9rem;
+                height: 9rem;
+            }
+
+            .name {
+                font-size: 50px;
+            }
+
+            .description {
+                font-size: 16px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .social-links {
+                margin-top: 30px;
+                margin-left: 20px;
+                margin-right: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-gap: 10px;
+                justify-items: center;
+            }
+
+            #resume p {
+                margin-inline: 20px;
+                font-size: 16px;
+                line-height: 1;
+                color: #333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="profile-image" src="profile.jpg" alt="Profile Image">
+        <div class="name">
+            <a href="http://t.me/leikooo" style="text-decoration: none; color: black;">Leikooo</a>
+        </div>
+        <div class="description">
+            <p>18 y.o. | ITMO Fullstack Developer | Software Engineering</p>
+        </div>
+
+        <div class="social-links">
+            <a class="social-link" href="https://github.com/Leikooo">
+                <img src="github.png" alt="github">
+                <p>Github</p>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/leikoo.jpeg">
+                <img src="inst.png" alt="inst">
+                <p>Instagram</p>
+            </a>
+            <a class="social-link" href="https://t.me/Leikooo">
+                <img src="tg.png" alt="tg">
+                <p>Telegram</p>
+            </a>
+            <a class="social-link-channel" href="https://t.me/LeikoSense">
+                <img src="channel.jpg" alt="tg">
+                <p>Channel</p>
+            </a>
+        </div>
+        <button id="resume-button">Показать резюме</button>
+        <div id="resume">
+            <h1>Резюме</h1>
+
+            <h2>Обо мне</h2>
+            <p>Меня зовут Никита, и я нахожусь на втором курсе университета, где изучаю информационные системы. В
+                параллель с академической деятельностью, я стремлюсь развивать свой профессиональный потенциал. Мои
+                усилия направлены на освоение навыков общения с клиентами и углубленное изучение теории информационных
+                технологий. Я способен успешно осваивать новый материал и применять его на практике.</p>
+
+            <h2>Опыт</h2>
+            <p>У меня четыре года опыта в области программирования. Я работал над проектами, соответствующими
+                техническим заданиям, и активно участвовал в хакатонах. Мои занятия фрилансом длились два года, в
+                течение которых я успешно выполнял заказы самостоятельно. Также у меня есть опыт сотрудничества с
+                разработчиками в командных проектах.</p>
+
+            <h2>Навыки</h2>
+            <p>Моими ключевыми навыками являются глубокие знания языка программирования Python и опыт создания
+                разнообразных Telegram-ботов, включая проекты, связанные с автоматизацией продаж и обработкой
+                криптовалютных и других платежей. Я знаком с работой API Telegram и имею опыт работы с документацией.
+                Также мой опыт включает работу с базами данных PostgreSQL, MySQL, SQLite и Oracle. За последний год я
+                успешно освоил полный стек разработки, включая веб-разработку с использованием фреймворков React/Next.js
+                и серверной разработки на Node.js/Golang.</p>
+
+            <p>На данный момент я активно участвую в разработке маркетплейса в роли фронтенд-разработчика. Моя
+                работа включает в себя сотрудничество с дизайнером и бэкенд-разработчиком для создания веб-приложения.
+            </p>
+
+        </div>
+        <footer class="footer" style="text-align:center; padding-top:20px;">
+            <img src="itmo.png" alt="itmo">
+            <p>Website created by Leikooo</p>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.container').style.opacity = '1';
+
+            // Найти кнопку и элемент резюме
+            const resumeButton = document.getElementById('resume-button');
+            const resume = document.getElementById('resume');
+
+            resumeButton.addEventListener('click', () => {
+                if (resume.style.maxHeight) {
+                    resume.style.maxHeight = null;
+                } else {
+                    // Определите максимальную высоту для анимации
+                    resume.style.maxHeight = resume.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+
+
+    </script>
+</body>
+
+</html>
